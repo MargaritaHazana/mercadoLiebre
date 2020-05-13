@@ -1,0 +1,50 @@
+<!-- Trayendo el head -->
+<%- include('partials/head') %> 
+</head>
+<body>
+    
+    <%- include('partials/header') %>
+
+    <h1 class="title titulo"> Mi perfil:</h1> 
+
+   <section class="form-container">
+
+        <section class="data">
+
+            <div class="categoria">
+                <label for="name">
+                    <strong>Nombre: </strong>
+                    <%= userElegido.name %>  
+                </label>
+            </div>
+
+            <div class="categoria">
+                <label for="surname">
+                    <strong>Apellido: </strong>
+                    <%= userElegido.surname %>  
+                </label>
+            </div>
+
+            <div class="categoria">
+                <label for="image">
+                    <strong>Avatar: </strong>
+                    <img src="/uploads/<%= userElegido.image %>" alt="avatar">  
+                </label>
+            </div>
+
+            <div class="categoria">
+                <label for="email">
+                    <strong>Email: </strong>
+                    <%= userElegido.email %>  
+                </label>
+            </div>
+
+            <button class="boton inicio"><a href="/" class="hiper">Volver al inicio</a></button>
+        </section>
+
+    </section>
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+
+.titulo{
+    margin-left: 8%;
+}
+
+.form-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+form {
+    width: 100%;
+    padding-left: 35%;;
+}
+
+form :nth-child(1){
+    margin-top: 0px;
+}
+
+.categoria{
+    width: 100%;
+    margin: 5%;
+}
+
+label {
+    color: #666666;
+    font-size: large;
+    font-weight: 300;
+}
+
+input {
+    width: 40%;
+}
+
+.boton {
+    background-color: #03264C;
+    width: 40%;
+    border-radius: 4%;
+    border: none;
+    color: white;
+    margin-left: 13%;
+    margin-bottom: 5%;
+    line-height: 2;
+}
+
+.seccion.desc{
+    margin-bottom: 4%;
+}
+
+.pregunta{
+    text-align: center;
+}
+
+.boton-eliminar{
+    width: 65%;
+    margin-top: 7%;
+}
+
+.eliminar{
+    width: 100%;
+}
+
+.botones-editar{
+    margin: 3%;
+}

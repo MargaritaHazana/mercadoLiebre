@@ -1,0 +1,53 @@
+<!-- Trayendo el head -->
+<%- include('partials/head') %> 
+
+<body>
+
+    <%- include('partials/header') %>
+
+    <h1 class="title titulo">Nuevo usuario:</h1> 
+
+   <section class="form-container">
+
+        <form action="/users/register" method="POST" enctype="multipart/form-data">
+
+            <div class="categoria">
+                <label for="name">Nombre:</label>
+                <input type="text" name= "name">
+            </div>
+
+            <div class="categoria">
+                <label for="description">Apellido:</label>
+                <input type="text" name="surname">
+            </div>
+
+            <div class="categoria">
+                <label for="image">Avatar:</label>
+                <input type="file" name= "image">
+            </div>
+
+            <div class="categoria">
+                <label for="price">Email:</label>
+                <input type="email" name="email" id="">
+            </div>
+
+            <div class="categoria">
+                <label for="discount">Contraseña:</label>
+                <input type="password" name="password" id="">
+            </div>
+
+            <div class="categoria">
+                <label for="discount">Repetir contraseña:</label>
+                <input type="password" name="passwordRepeat" id="">
+            </div>
+
+            <button class="boton">Registrarme</button>
+        </form>
+
+    </section>
+
+    <%- include('partials/footer') %>
+
+</body>
+
+</html>

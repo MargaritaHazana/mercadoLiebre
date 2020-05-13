@@ -1,0 +1,55 @@
+<!-- Trayendo el head -->
+<%- include('partials/head') %> 
+
+<body>
+
+    <%- include('partials/header') %>
+
+   <h1 class="title titulo">Modificar: <br>
+    <%= productoElegido.name %> 
+    </h1> 
+
+    <section class="form-container">
+
+        <form action="/product/edit/<%= productoElegido.id %>?_method=put" method="POST">
+
+            <div class="categoria">
+                <label for="name">Nombre:</label>
+                <input type="text" name= "name" value="<%= productoElegido.name %>">
+            </div>
+
+            <div class="categoria">
+                <label for="description">Descripcion:</label>
+                <input type="text" name="description" value="<%= productoElegido.description %>">
+            </div>
+
+            <div class="categoria">
+                <label for="price">Precio:</label>
+                <input type="text" name= "price" value="<%= productoElegido.price %>">
+            </div>
+
+            <div class="categoria">
+                <label for="discount">Descuento:</label>
+                <input type="text" name= "discount" value="<%= productoElegido.discount %>">
+            </div>
+
+            <div class="categoria">
+                <label for="image">Imagen:</label>
+                <input type="text" name= "image" value="<%= productoElegido.image %>">
+            </div>
+
+            <div class="categoria">
+                <label for="category">Categoría:</label>
+                <input type="text" name= "category" value="<%= productoElegido.category %>">
+            </div>
+
+            <button class="boton">Modificar</button>
+
+        </form>
+
+        </section>
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>

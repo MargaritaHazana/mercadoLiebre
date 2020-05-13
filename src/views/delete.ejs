@@ -1,0 +1,59 @@
+<!-- Trayendo el head -->
+<%- include('partials/head') %> 
+</head>
+<body>
+    <%- include('partials/header') %> 
+<main>
+    <h1 class="title">
+        Eliminar producto:<br> 
+    </h1>
+
+    <div class="prod">
+
+        <div class="imagen">
+            <img src="/images/products/<%= productoElegido.image %> " alt="foto">
+            <p class="description"><%= productoElegido.description %>  </p>
+        </div>
+
+        <div class="margen">
+            <p class="nombre-prod"><%= productoElegido.name %></p>
+            <% if (productoElegido.discount !== 0) { %>
+                <div class="seccion-desc">
+                    <p class=" descuento precio-viejo">
+                        <%= precioViejo %>    
+                    </p>
+                    <p class="descuento desc-detail"><%= productoElegido.discount + '% OFF' %></p>
+                </div>
+                <p class="precio"> 
+                    <%= precioDescuento %>
+                </p>
+            <% } %> 
+            <% if (productoElegido.discount == 0) { %>
+                <p class="precio">  
+                    <%= precioViejo %>
+                </p>
+            <% } %>
+
+            <div class="aclaraciones">
+                <p class="pregunta">¿Estas seguro que querés eliminar este producto?</p>
+                <div class="boton-eliminar">
+                    <form action="/product/delete/<%= productoElegido.id %>?_method=delete" method="POST">
+                        <button class="boton eliminar">Eliminar producto</a>
+                    </form>
+                </div>
+    
+                <div class="botones-editar">
+                    <form action="/product/detail/<%= productoElegido.id %>/<%= productoElegido.category %>" method="GET">
+                        <button class="editar">Cancelar</button>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</main>
+    <%- include('partials/footer') %> 
+</body>
+
+</html>

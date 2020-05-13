@@ -1,0 +1,84 @@
+<!-- Trayendo el head -->
+<%- include('partials/head') %> 
+
+<body>
+  <!-- Trayendo el header -->
+  <%- include('partials/header') %>
+   
+	<main>
+
+		<section class="banner">
+			<img src="images/img-home-banner.jpg" alt="banner" class="banner">
+    </section>
+    
+		<section class="productos-home">
+      <h3 class="title">Ofertas</h3>
+			<section class="seccion1">
+
+        <% listaProductos.forEach(producto => { %>
+          <% if (producto.category == "in-sale") { %>
+            <div class="prod dropdown">
+
+              <a href="/product/detail/<%= producto.id %>/<%= producto.category %>">
+
+                <img src="/images/products/<%= producto.image %>" alt="foto">
+
+                <section class="camion">
+                  <i class="fas fa-truck"></i>
+                </section>
+
+                <div class="precio-total">
+                  <p class="precio">
+                    <% let descuento = producto.price * (producto.discount/100) %> 
+                    <% let precioDescuento = Math.round(producto.price - descuento) %> 
+                    <%= '$' + redondeo(precioDescuento)%>
+                  </p>
+                  <p class="descuento"><%= producto.discount + '%' + 'OFF' %></p>
+                </div>
+                
+              </a>
+            </div>
+          <% } %>
+        <% }) %>
+      </section>
+      
+      <h3 class="title">Basado en tu última visita</h3>
+      
+			<section class="seccion1">
+
+        <% listaProductos.forEach(producto => { %>
+          <% if (producto.category == "visited") { %>
+
+            <div class="prod">
+
+              <a href="/product/detail/<%= producto.id -1%>/<%= producto.category %>">
+
+                <img src="/images/products/<%= producto.image %>" alt="foto">
+
+                <section class="camion">
+                  <i class="fas fa-truck"></i>
+                </section>
+
+                <div class="precio-total">
+                  <p class="precio">
+                    <% let descuento = producto.price * (producto.discount/100) %> 
+                    <% let precioDescuento = Math.round(producto.price - descuento) %> 
+                    <%= '$' + redondeo(precioDescuento)%> 
+                  </p>
+
+                  <% if (producto.discount !== 0) { %>
+                    <p class="descuento"><%= producto.discount + '%' + 'OFF' %></p>
+                  <% } %>
+                  
+                </div>
+              </a>
+            </div>
+          <% } %>
+        <% }) %>
+	  </section>
+  </main>
+  <!-- Trayendo el footer -->
+  <%- include('partials/footer.ejs') %> 
+
+</body>
+</html>

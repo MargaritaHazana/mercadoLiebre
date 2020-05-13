@@ -1,0 +1,333 @@
+
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+    width: 100%;
+    background-color: #ebebeb;
+    margin: 0%;
+}
+header {
+    width: 100%;
+    padding: 3%;
+    padding-bottom: 1%;
+    background-color: #EAC926;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.logo {
+    width: 25%;
+    margin-top: 1%;
+}
+
+.buscador {
+    width: 55%;
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    background-color: white;
+    border-radius: 2%;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.busqueda {
+    width: 100%;
+    border: none;
+    border-radius: 4%;
+}
+
+.boton-buscador {
+    background-color: white;
+    border: none;
+    border-left: solid 1px #ebebeb;
+    color: #666666;
+}
+
+.slogan {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3% 0px;
+}
+
+.slogan p {
+    margin: 0px;
+    text-align: center;
+}
+
+.slogan i {
+    margin-right: 1%;
+}
+
+.menu {
+    background-color:#03264C;
+    border-radius: 8%;
+    width: 8%;
+    text-align: center;
+}
+
+.nav-bar {
+    display: none;
+}
+
+.banner {
+    width: 100%;
+}
+
+.productos-home {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.seccion1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.title {
+    color: #666666;
+    justify-self: flex-start;
+    padding: 5%;
+    text-align: left;
+    font-size: 150%;
+    width: 100%;
+}
+
+.prod {
+    width: 90%;
+    background-color: white;
+    border-radius: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+    position: relative;
+    align-items: flex-start;
+}
+
+.prod img {
+    width: 100%;
+    /* height: 80%; */
+    border-bottom: #ebebeb solid 1px;
+    border-radius: 2% 2% 0% 0%;
+    order: 0;
+}
+
+.camion {
+    border: #39b54a solid 2px;
+    color: #39b54a;
+    background-color: white;
+    border-radius: 100%;
+    width: 15%;
+    height: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 79%;
+    right: 9%;
+    font-size: 150%;
+}
+
+.precio-total {
+    width: 100%;
+    padding: 2% 5%;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.precio {
+    margin: 0px 5% 0px 0px;
+    font-size: 250%;
+    color: black;
+}
+
+.descuento {
+    color: #39b54a;
+    text-decoration: none;
+    margin: 0%;
+    font-size: 22px;
+}
+
+footer {
+    background-color: white;
+    color: #666666;
+}
+
+.info {
+    border-bottom: #ebebeb solid 2px;
+    padding-top: 4%;
+}
+
+.cartel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 0.75% 7%;
+}
+
+.cartel i {
+    width: 100%;
+    color: #03264C;
+    font-size: 200%;
+}
+
+.copyright {
+    color: #666666;
+    padding: 1%;
+    margin-left: 2%;
+}
+
+@media (min-width: 768px){
+    header {
+        padding: 1%;
+    }
+    .logo {
+        width: 20%;
+    }
+
+    .buscador {
+        width: 47%;
+        align-items: center;
+        margin-left: 2%;
+    }
+
+    .search {
+        height: 50%;
+    }
+
+    .slogan {
+        width: 25%;
+        text-align: right;
+        justify-content: flex-end;
+        margin: 0px;
+    }
+
+    .slogan i {
+        width: 5%;
+        align-self: flex-start;
+        margin-top: 3%;
+        margin-right: 1%;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .nav-bar {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    ul {
+        list-style: none;
+        width: 47%;
+        display: flex;
+        justify-content: space-around;
+        padding: 0px;
+    }
+
+    .nav-bar li {
+        display: inline;
+    }
+
+    .sesion {
+        display: flex;
+        align-items: center;
+    }
+
+    .sesion i {
+        margin: 0px 2% 0px 0px;
+    }
+
+    .seccion1 {
+        justify-content: space-around;
+    }
+
+    .prod {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1024px){
+
+    header {
+        justify-content: flex-start;
+        padding: 1% 4%;
+    }
+
+    .buscador {
+        width: 40%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .slogan {
+        width: 30%;
+        justify-self: flex-end;
+        text-align: right;
+        justify-content: flex-start;
+    }
+
+    .title {
+        padding: 2%;
+        font-size: 173%;
+    }
+
+    ul {
+        width: 39%;
+    }
+
+    a {
+        color: black;
+    }
+
+    .productos-home {
+        padding: 3%;
+    }
+
+    .prod {
+        width: 22%;
+    }
+
+    .prod:hover {
+        border: #cbcbcb 2px solid;
+
+    }
+
+    .camion {
+        font-size: 110%;
+    }
+
+    .precio {
+        font-size: 177%;
+        margin-right: 1%;
+    }
+
+    .descuento {
+        font-size: 14px;
+    }
+
+    .info {
+        display: flex;
+    }
+
+    .cartel {
+        width: 33%;
+    }
+}

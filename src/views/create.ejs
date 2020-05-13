@@ -1,0 +1,52 @@
+<!-- Trayendo el head -->
+<%- include('partials/head') %> 
+
+<body>
+
+    <%- include('partials/header') %>
+
+   <h1 class="title titulo">Nuevo producto:</h1> 
+
+   <section class="form-container">
+
+    <form action="/product/create" method="POST" enctype="multipart/form-data">
+
+        <div class="categoria">
+            <label for="name">Nombre:</label>
+            <input type="text" name= "name">
+        </div>
+
+        <div class="categoria">
+            <label for="description">Descripcion:</label>
+            <input type="text" name="description">
+        </div>
+
+        <div class="categoria">
+            <label for="price">Precio:</label>
+            <input type="text" name= "price" >
+        </div>
+
+        <div class="categoria">
+            <label for="discount">Descuento:</label>
+            <input type="text" name= "discount">
+        </div>
+
+        <div class="categoria">
+            <label for="image">Imagen:</label>
+            <input type="file" name= "image">
+        </div>
+
+        <div class="categoria">
+            <label for="category">Categoría:</label>
+            <input type="text" name= "category">
+        </div>
+
+        <button class="boton">Crear producto</button>
+    </form>
+
+    </section>
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>

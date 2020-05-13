@@ -1,0 +1,64 @@
+<!-- Trayendo el head -->
+<%- include('partials/head') %> 
+
+<body>
+    <%- include('partials/header') %> 
+    <main>
+        
+        <p class="title">Detalle del producto:
+            <%= productoElegido.name %> 
+        </p>
+
+        <div class="prod">
+
+            <div class="imagen">
+                <img src="/images/products/<%= productoElegido.image %> " alt="foto">
+                <p class="description"><%= productoElegido.description %>  </p>
+            </div>
+
+            <div class="margen">
+                <p class="nombre-prod"><%= productoElegido.name %></p>
+                <% if (productoElegido.discount !== 0) { %>
+                    <div class="seccion-desc">
+                        <p class=" descuento precio-viejo">
+                            <%= precioViejo %>    
+                        </p>
+                        <p class="descuento desc-detail"><%= productoElegido.discount + '% OFF' %></p>
+                    </div>
+                    <p class="precio"> 
+                        <%= precioDescuento %>
+                    </p>
+                <% } %> 
+                <% if (productoElegido.discount == 0) { %>
+                    <p class="precio">  
+                        <%= precioViejo %>
+                    </p>
+                <% } %>
+
+                <div class="aclaraciones">
+                    <p class="cuotas">
+                        <i class="fas fa-credit-card fotito"></i> Pagá en 12 cuotas sin interés
+                    </p>
+                    <p class="retira">
+                        <i class="fas fa-store fotito"></i>Retirá por el local de vendedor
+                    </p>
+                </div>
+
+                <div class="boton-comprar">
+                    <button type="button" class="comprar">Comprar ahora</button>
+                </div>
+
+                <div class="botones-editar">
+                    <form action="/product/edit/<%= productoElegido.id %>" method="get">
+                        <button type="submit" class="editar">Modificar</a>
+                    </form>
+                    <form action="/product/delete/<%= productoElegido.id %>" method="GET">
+                        <button type="submit" class="editar">Eliminar producto</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('partials/footer') %> 
+</body>
+</html>

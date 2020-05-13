@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mercado Liebre Argentina</title>
+	<!-- Font Awesome Stylesheet -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<!-- Bootstrap Grid Stylesheet -->
+	<link rel="stylesheet" href="/css/bootstrap-grid.min.css">
+	<!-- Agregando el Stylesheet necesario en cada view -->
+	<% switch (view) {
+		case 'index': %>
+	 	<link rel="stylesheet" href="/stylesheets/app.css">
+		<%	break;
+		case 'detail': %>
+		<link rel="stylesheet" href="/stylesheets/app.css">
+		<link rel="stylesheet" href="/stylesheets/detalle.css">
+		<%	break; 
+		case 'other': %>
+		<link rel="stylesheet" href="/stylesheets/app.css">
+		<link rel="stylesheet" href="/stylesheets/detalle.css">
+		<link rel="stylesheet" href="/stylesheets/others.css">
+		<%	break; 
+		case 'profile': %>
+		<link rel="stylesheet" href="/stylesheets/app.css">
+		<link rel="stylesheet" href="/stylesheets/detalle.css">
+		<link rel="stylesheet" href="/stylesheets/others.css">
+		<link rel="stylesheet" href="/stylesheets/profile.css">
+		<%	break; 
+	}%>
+</head>
